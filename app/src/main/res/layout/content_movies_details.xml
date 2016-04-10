@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activity.movies_details.MoviesDetailsActivity"
+    tools:showIn="@layout/activity_movies_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/moviePosterImage"
+                android:layout_width="130dp"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                app:placeholderImage="@drawable/cinema_white"
+                app:placeholderImageScaleType="centerInside"
+                tools:background="@drawable/placeholder"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieTitle"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                tools:text="Batman Vs Superman : Dawn of justice"
+                android:textSize="20sp"
+                android:textColor="@color/primaryText"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorDividerLight"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="5dp"
+                android:text="@string/release_date"
+                android:textSize="18sp"
+                android:textColor="@color/primaryText"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieReleaseDate"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                tools:text="2016-03-23"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryText"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="5dp"
+                android:text="@string/rating"
+                android:textSize="18sp"
+                android:textColor="@color/primaryText"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:layout_gravity="center_horizontal"
+                    android:numStars="10"
+                    android:hapticFeedbackEnabled="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"
+                    android:id="@+id/movieRating"
+                    tools:text="8"
+                    android:textSize="16sp"
+                    android:textColor="@color/secondaryText"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="5dp"
+                android:text="@string/overview"
+                android:textSize="18sp"
+                android:textColor="@color/primaryText"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieOverview"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                tools:text="Lorem Ipsum"
+                android:textSize="16sp"
+                android:textColor="@color/secondaryText"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

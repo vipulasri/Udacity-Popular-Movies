@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.movies.HomeActivity">
+
+    <item
+        android:id="@+id/action_sort"
+        android:orderInCategory="100"
+        android:title="@string/action_sort"
+        android:icon="@drawable/ic_sort_24dp"
+        app:showAsAction="always">
+
+        <menu>
+            <group
+                android:id="@+id/sort_group"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/sort_by_popularity"
+                    android:title="@string/sort_by_popularity" />
+
+                <item
+                    android:id="@+id/sort_by_rating"
+                    android:title="@string/sort_by_rating" />
+            </group>
+        </menu>
+
+    </item>
+</menu>
