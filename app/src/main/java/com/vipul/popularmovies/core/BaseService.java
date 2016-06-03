@@ -12,6 +12,12 @@ import java.util.Map;
  */
 public class BaseService {
 
+    //Opens connection port via GET Method
+    protected void executeGetRequest(String url, Map<String, String> headers, Map<String, String> params, TypeToken typeToken, ResponseListener listener) {
+        url = NetworkUtils.getUrl(url, params);
+        executeRequest(Request.Method.GET, url, headers, params, typeToken, listener);
+    }
+
     //Opens connection port via POST Method
     protected void executePostRequest(String url, Map<String, String> headers, Map<String, String> params, TypeToken typeToken, ResponseListener listener) {
         url = NetworkUtils.getUrl(url, params);

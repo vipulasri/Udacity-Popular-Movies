@@ -10,9 +10,9 @@ import java.util.List;
 public class MoviesResponse {
 
     private Integer page;
-    private Integer totalPages;
-    private Integer totalResults;
     private List<Movies> results;
+    private Integer total_pages;
+    private Integer total_results;
 
     public Integer getPage() {
         return page;
@@ -23,19 +23,19 @@ public class MoviesResponse {
     }
 
     public Integer getTotalPages() {
-        return totalPages;
+        return total_pages;
     }
 
     public void setTotalPages(Integer totalPages) {
-        this.totalPages = totalPages;
+        this.total_pages = totalPages;
     }
 
     public Integer getTotalResults() {
-        return totalResults;
+        return total_results;
     }
 
     public void setTotalResults(Integer totalResults) {
-        this.totalResults = totalResults;
+        this.total_results = totalResults;
     }
 
     public List<Movies> getResults() {

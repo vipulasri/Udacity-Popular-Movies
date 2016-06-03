@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">Popular Movies</string>
     <string name="action_settings">Settings</string>
+
     <string name="action_sort">Sort</string>
+    <string name="action_share">Share</string>
+
     <string name="sort_by_popularity">Popular</string>
     <string name="sort_by_rating">Rating</string>
+    <string name="sort_by_favorite">Favorite</string>
 
     <string name="title_activity_home">Home Activity</string>
     <string name="title_activity_movies_details">MoviesDetailsActivity</string>
@@ -11,5 +15,20 @@
     <string name="no_internet">No Internet Available!</string>
     <string name="release_date">Release Date</string>
     <string name="rating">Rating</string>
-    <string name="overview">overview</string>
+    <string name="overview">Overview</string>
+    <string name="videos">Videos</string>
+    <string name="reviews">Reviews</string>
+    <string name="movie_item_btn_favorite_desc">Save to favorites</string>
+    <string name="player_error">Error initializing YouTube player</string>
+
+    <string name="no_reviews_available">No Reviews Available</string>
+    <string name="no_favorite_available">No Favorite Movies Available</string>
+    
+    <string name="added_favorite">Saved to favorites</string>
+    <string name="removed_favorite">Removed from favorites</string>
+
+    <string name="content_authority">com.vipul.popularmovies</string>
+
+    <string name="message_empty_movie_fragment">Please choose a movie</string>
+
 </resources>
