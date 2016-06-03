@@ -1,5 +1,7 @@
 package com.vipul.popularmovies.core;
 
+import android.util.Log;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.NetworkResponse;

@@ -46,7 +46,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void setupToolbar() {
         if (toolbar != null) {
             setSupportActionBar(toolbar);
-            //toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
+            //toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
         }
     }
 
@@ -86,7 +86,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     //Method for when home button is clicked
-    private void onActionBarHomeIconClicked() {
+    public void onActionBarHomeIconClicked() {
         if (isDisplayHomeAsUpEnabled()) {
             onBackPressed();
         } else {

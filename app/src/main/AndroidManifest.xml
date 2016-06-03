@@ -26,6 +26,12 @@
             android:name=".activity.movies_details.MoviesDetailsActivity"
             android:label="@string/title_activity_movies_details"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <provider
+            android:authorities="@string/content_authority"
+            android:name=".database.MoviesProvider"
+            android:exported="false"
+            android:syncable="true"/>
     </application>
 
 </manifest>

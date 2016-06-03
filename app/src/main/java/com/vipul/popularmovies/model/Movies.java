@@ -3,6 +3,7 @@ package com.vipul.popularmovies.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,6 +27,39 @@ public class Movies implements Parcelable {
     private boolean video;
     private String vote_average;
     private int vote_count;
+    private boolean favorite = false;
+    
+    public Movies( int id, 
+             boolean adult, 
+             String poster_path, 
+             String overview, 
+             String release_date, 
+             List<Integer> genre_ids,
+             String original_title,
+             String original_language, 
+             String title, 
+             String backdrop_path, 
+             String popularity, 
+             boolean video, 
+             String vote_average, 
+             int vote_count){
+
+        this.id = id;
+        this.adult = adult;
+        this.poster_path = poster_path;
+        this.overview = overview;
+        this.release_date = release_date;
+        this.genre_ids = genre_ids;
+        this.original_title = original_title;
+        this.original_language = original_language;
+        this.title = title;
+        this.backdrop_path = backdrop_path;
+        this.popularity = popularity;
+        this.video = video;
+        this.vote_average = vote_average;
+        this.vote_count = vote_count;
+        
+    }
 
     public int getId() {
         return id;
@@ -139,6 +173,14 @@ public class Movies implements Parcelable {
         this.vote_count = vote_count;
     }
 
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -151,7 +193,7 @@ public class Movies implements Parcelable {
         dest.writeString(poster_path);
         dest.writeString(overview);
         dest.writeString(release_date);
-        //dest.writeTypedList(genre_ids);
+        dest.writeList(genre_ids);
         dest.writeString(original_title);
         dest.writeString(original_language);
         dest.writeString(title);
@@ -160,6 +202,7 @@ public class Movies implements Parcelable {
         dest.writeByte((byte) (video ? 1 : 0));
         dest.writeString(vote_average);
         dest.writeInt(vote_count);
+        dest.writeByte((byte) (favorite ? 1 : 0));
 
     }
 
@@ -182,6 +225,10 @@ public class Movies implements Parcelable {
         poster_path = in.readString();
         overview = in.readString();
         release_date = in.readString();
+
+        genre_ids = new ArrayList<Integer>();
+        in.readList(genre_ids, null);
+
         original_title = in.readString();
         original_language = in.readString();
         title = in.readString();
@@ -190,5 +237,6 @@ public class Movies implements Parcelable {
         video = in.readByte()!=0;
         vote_average = in.readString();
         vote_count = in.readInt();
+        favorite = in.readByte()!=0;
     }
 }

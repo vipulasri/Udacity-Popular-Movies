@@ -2,13 +2,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="3dp"
-    android:paddingRight="3dp"
+    android:background="@color/colorBackground"
     tools:context=".activity.movies.MoviesFragment">
+
+    <include
+        layout="@layout/layout_no_favorite"
+        android:id="@+id/layout_no_favorite"/>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:id="@+id/recyclerView"/>
 
 </RelativeLayout>

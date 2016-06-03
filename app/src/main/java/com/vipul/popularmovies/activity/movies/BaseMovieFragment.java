@@ -2,6 +2,8 @@ package com.vipul.popularmovies.activity.movies;
 
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
+
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.vipul.popularmovies.utils.NetworkUtils;
 
 /**
@@ -9,13 +11,18 @@ import com.vipul.popularmovies.utils.NetworkUtils;
  */
 public class BaseMovieFragment extends Fragment {
 
+    MaterialDialog materialDialog;
 
     public void showProgressDialog() {
-        ((HomeActivity) getActivity()).showProgressDialog();
+        materialDialog = new MaterialDialog.Builder(getActivity())
+                .content("Please Wait")
+                .cancelable(false)
+                .progress(true, 0)
+                .show();
     }
 
     public void hideProgressDialog() {
-        ((HomeActivity) getActivity()).hideProgressDialog();
+        materialDialog.dismiss();
     }
 
     public boolean isInternetAvailable() {
@@ -33,5 +40,14 @@ public class BaseMovieFragment extends Fragment {
     public CoordinatorLayout getCoordinatorLayout() {
         return ((HomeActivity) getActivity()).getCoordinatorLayout();
     }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        if(materialDialog!=null) {
+            materialDialog.dismiss();
+        }
+    }
+
 
 }

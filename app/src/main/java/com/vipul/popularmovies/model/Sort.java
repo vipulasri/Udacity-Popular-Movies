@@ -6,7 +6,8 @@ package com.vipul.popularmovies.model;
 public enum Sort {
 
     POPULAR("popular"),
-    TOP_RATED("top_rated");
+    TOP_RATED("top_rated"),
+    FAVORITE("favorite");
 
     private final String value;
 
