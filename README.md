@@ -31,11 +31,9 @@ You must provide your own API key in order to build the app. When you get it, ju
 
 ![screen](../master/art/popular-movies-screen4.png)
 
-<<<<<<< HEAD
 ![screen](../master/art/popular-movies-screen5.png)
 
-=======
->>>>>>> origin/master
+
 ## Libraries
 
 * [Fresco](https://github.com/facebook/fresco)
