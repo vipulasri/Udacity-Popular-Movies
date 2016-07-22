@@ -43,7 +43,7 @@ You must provide your own API key in order to build the app. When you get it, ju
 
 ## License
 
-    Copyright 2015 Vipul Asri
+    Copyright 2016 Vipul Asri
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
