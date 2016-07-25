@@ -20,6 +20,8 @@ You must provide your own API key in order to build the app. When you get it, ju
     ```
     app/gradle.properties
     ```
+    
+### [View Releases](https://github.com/vipulasri/Udacity-Popular-Movies/releases)
 
 ## Screens
 
